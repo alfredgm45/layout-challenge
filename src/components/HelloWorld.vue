@@ -106,9 +106,16 @@ export default {
     menuClick () {
       console.log('Click event of the menu')
     },
+    /** highlights the option on the right menu when the mouse is over this one
+     * @param {Number} Option index on the left menu
+     */
     optionHightlight (index) {
       this.items[index].weight = 'font-weight-bold'
     },
+    /**
+     * Takes off the highlighted on the option selected
+     * @param {Number} Option index on the left menu
+     */
     optionNormal (index) {
       this.items[index].weight = ''
     }
@@ -117,6 +124,7 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* Css grid */
 .content {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -139,6 +147,7 @@ export default {
   grid-template-columns: 350px;
   justify-content: center;
 }
+/* Reduces the size of the form when the screen size is for mobile */
 @media (max-width: 600px) {
   .form {
     display: grid;
